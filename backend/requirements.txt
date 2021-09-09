@@ -1,2 +1,9 @@
 fastapi
 uvicorn
+
+#for databases
+sqlalchemy #ORM like tortoise
+psycopg2 #adaptor to connect sqlachemy with sqldatabase
+
+#for creating env variables
+python-dotenv
