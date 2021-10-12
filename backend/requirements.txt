@@ -9,6 +9,10 @@ psycopg2 #adaptor to connect sqlachemy with sqldatabase
 python-dotenv
 
 #for email validation
-pydantic[email]
+pydantic
 #for hashing
 passlib[bcrypt]
+
+#for testing
+pytest
+requests
