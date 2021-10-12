@@ -11,8 +11,12 @@ def create_new_job(job: JobCreate,db: Session,owner_id:int):
     return job_object
 
 def retrieve_job(id:int,db:Session):
+    print("first line works")
     job=db.query(Job).filter(Job.id==id).first()
-#Job is the table 
+    return job
+#Job is the table
 def list_jobs(db:Session):
-    jobs=db.query(Job).filter(Job.is_active==True)
+    
+    jobs=db.query(Job)
+    print(jobs).filter(Job.is_active==True)
     return jobs
