@@ -16,3 +16,9 @@ passlib[bcrypt]
 #for testing
 pytest
 requests
+
+#for jwt tokens
+python-jose
+
+#for form data 
+python-multipart
