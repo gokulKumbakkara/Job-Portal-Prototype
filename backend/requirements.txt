@@ -22,3 +22,6 @@ python-jose
 
 #for form data 
 python-multipart
+
+#for templates
+jinja2
