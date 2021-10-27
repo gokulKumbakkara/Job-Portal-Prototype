@@ -2,9 +2,11 @@ from fastapi import FastAPI
 from fastapi.routing import APIRoute, APIRouter
 
 from webapps.jobs import route_jobs
+from webapps.users import route_users
 
 
 api_router=APIRouter()
 
 
 api_router.include_router(route_jobs.router,prefix="",tags=["homepage"])
+api_router.include_router(route_users.router,prefix="",tags=["user"])
