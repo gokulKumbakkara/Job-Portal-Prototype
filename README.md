@@ -1,50 +1,84 @@
-# 💼 FastAPI Job Portal Prototype
-This project is a **prototype Job Portal API** built with **FastAPI**, created while following a Udemy course on FastAPI. It demonstrates how to build a backend for a job portal with **CRUD operations**, authentication, and database integration.
+# FastAPI Job Portal Prototype
 
-## 🚀 Features
-- 👤 User registration & authentication using JSON Web Tokens (JWT)
-- 📝 Create, read, update, and delete job listings with validation using Pydantic
-- 🔍 Search and filter jobs by various criteria such as job title, location, and category
-- 💾 Database integration with support for both SQLite and PostgreSQL using SQLAlchemy
-- ⚡ Built with **FastAPI** for speed and efficiency, and served using Uvicorn ASGI server
+*A prototype Job Portal API built with FastAPI, created while following a Udemy course on FastAPI.*
 
-## 🛠️ Tech Stack
-- **FastAPI**: Web framework for building the API
-- **Pydantic**: Data validation library for ensuring data consistency
-- **SQLAlchemy**: Object-Relational Mapping (ORM) tool for database handling
-- **SQLite / PostgreSQL**: Database backends for storing and retrieving data
-- **Uvicorn**: ASGI server for serving the FastAPI application
+It demonstrates how to build a backend for a job portal with CRUD operations, authentication, and database integration.
 
-## 📦 Installation
-To install the project, follow these steps:
-1. Clone the repository using `git clone https://github.com/your-username/Job-Portal-Prototype.git`
-2. Navigate to the project directory using `cd Job-Portal-Prototype`
-3. Install the required dependencies using `pip install -r backend/requirements.txt`
+## Features
+
+- User registration & authentication using JSON Web Tokens (JWT)
+- Create, read, update, and delete job listings with validation using Pydantic
+- Search and filter jobs by various criteria such as job title, location, and category
+- Database integration with support for both SQLite and PostgreSQL using SQLAlchemy
+- Built with **FastAPI** for speed and efficiency, served using the Uvicorn ASGI server
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Web framework | FastAPI |
+| Validation | Pydantic |
+| ORM | SQLAlchemy |
+| Database | SQLite / PostgreSQL (`psycopg2`) |
+| ASGI server | Uvicorn |
+| Auth | JWT (`python-jose`), Passlib[bcrypt] |
+| Templating | Jinja2 |
+| Config | python-dotenv |
+| Testing | pytest, requests |
+
+Dependencies are declared in `backend/requirements.txt`.
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.x
+- pip
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/gokulKumbakkara/Job-Portal-Prototype.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd Job-Portal-Prototype
+   ```
+3. Install the required dependencies:
+   ```bash
+   pip install -r backend/requirements.txt
+   ```
 4. Create a database using either SQLite or PostgreSQL, and update the `database.ini` file accordingly
 
-## 🚀 Usage
-To run the project, follow these steps:
-1. Navigate to the project directory using `cd Job-Portal-Prototype`
-2. Activate the virtual environment using `source venv/bin/activate` (if using a virtual environment)
-3. Run the application using `uvicorn backend.main:app --host 0.0.0.0 --port 8000`
-4. Access the API documentation using `http://localhost:8000/docs`
+## Usage
 
-## 🗂️ Folder Structure
-The project follows a simple folder structure:
-- `README.md`: Project README file
-- `backend`: Backend code directory
-  - `main.py`: FastAPI application entry point
-  - `models`: Database model definitions
-  - `routes`: API route definitions
-  - `schemas`: Pydantic schema definitions
-  - `utils`: Utility functions
-  - `requirements.txt`: Dependency requirements file
+1. Navigate to the project directory: `cd Job-Portal-Prototype`
+2. Activate the virtual environment (if using one): `source venv/bin/activate`
+3. Run the application:
+   ```bash
+   uvicorn backend.main:app --host 0.0.0.0 --port 8000
+   ```
+4. Access the API documentation at `http://localhost:8000/docs`
 
-## 🤝 Contributing
+## Project Structure
+
+- `backend/` — backend code directory
+  - `main.py` — FastAPI application entry point
+  - `apis/` — API route definitions
+  - `core/` — core configuration and utilities
+  - `db/` — database setup and session management
+  - `schemas/` — Pydantic schema definitions
+  - `webapps/` — web-facing templates/handlers
+  - `tests/` — automated tests
+  - `requirements.txt` — dependency requirements file
+
+## Contributing
+
 To contribute to the project, follow these steps:
 1. Fork the repository using the GitHub web interface
-2. Clone the forked repository using `git clone https://github.com/your-username/Job-Portal-Prototype.git`
-3. Create a new branch using `git branch feature/your-feature`
-4. Make changes to the code and commit them using `git commit -m "Your commit message"`
-5. Push the changes to your forked repository using `git push origin feature/your-feature`
-6. Create a pull request using the GitHub web interface to merge your changes into the main repository
+2. Clone the forked repository
+3. Create a new branch: `git branch feature/your-feature`
+4. Make changes to the code and commit them: `git commit -m "Your commit message"`
+5. Push the changes to your forked repository: `git push origin feature/your-feature`
+6. Create a pull request to merge your changes into the main repository
